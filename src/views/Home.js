@@ -1,16 +1,25 @@
-import React from 'react';
+import React from "react";
 
-function Home({
-  onIncrement,
-  counter,
-}) {
-  return (
-    <div>
-      <button>
-        Vous avez cliqué {counter} fois
-      </button>
-    </div>
-  );
-};
+function Home({ onIncrement, onDecrement, counter }) {
+	return (
+		<div>
+			<h2>Vous avez cliqué {counter} fois</h2>
+			<button
+				onClick={() => {
+					onIncrement();
+				}}
+			>
+				+
+			</button>
+			<button
+				onClick={() => {
+					onDecrement();
+				}}
+			>
+				-
+			</button>
+		</div>
+	);
+}
 
 export default Home;
